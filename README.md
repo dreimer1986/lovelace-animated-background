@@ -1,3 +1,14 @@
+# ADD CHAGES FOR HOMEASSISTANT VERSION 2023.04.0
+
+```Code
+Root = Root && Root.querySelector("app-drawer-layout partial-panel-resolver, ha-drawer partial-panel-resolver");
+```
+
+Added transparent mode for cards.
+
+### Cloning from [Villhellm](https://github.com/Villhellm/lovelace-animated-background)
+May he rest in peace.
+
 # MAJOR BREAKING CHANGE IN v0.5.0+
 YOUR ANIMATED BACKGROUND CONFIGURATION WILL NEED TO BE UPDATED, follow the new configuration guidelines below.
 
