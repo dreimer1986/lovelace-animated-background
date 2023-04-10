@@ -433,6 +433,8 @@ function renderBackgroundHTML() {
     else {
       doc_body = `<img src='${state_url}'>`
     }
+
+    
     var source_doc = `
     <html>
     <head>
@@ -493,14 +495,27 @@ function renderBackgroundHTML() {
           min-height: 100vh;
           z-index: -10;
       }`;
+      
+      var css_transparent = document.createElement ("style");
+      css_transparent.innerHTML = `
+      
+        hui-masonry-view{
+    	  opacity: 0.8;
+        }
+        
+	ha-card-box-shadow: 1px 1px 5px 0px rgb(12, 12, 14);
+      `;
+
       var div = document.createElement("div");
       div.id = "background-video";
-      div.className = "bg-wrap"
+      div.className = "bg-wrap";
       div.innerHTML = `
      <iframe id="background-iframe" class="bg-video" frameborder="0" srcdoc="${source_doc}"/> 
     `;
+    
       Root.shadowRoot.appendChild(style);
-      Root.shadowRoot.appendChild(div)
+      Root.shadowRoot.appendChild(div);
+      View.insertBefore(css_transparent,View.firstChild);
       Previous_Url = state_url;
     }
     else {
