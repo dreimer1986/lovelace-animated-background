@@ -503,6 +503,7 @@ function renderBackgroundHTML() {
     	  opacity: 0.8;
         }
         
+	ha-card-box-shadow: 1px 1px 5px 0px rgb(12, 12, 14);
       `;
 
       var div = document.createElement("div");
